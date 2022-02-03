@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Russo+One&display=swap" rel="stylesheet">
+    <link href = "{% static 'css/style.css' %}" rel = "stylesheet">
+    <link id="theme-style" href = "" rel = "stylesheet">
+    
+   
+    <title>Portfoliooooo</title>
+</head>
+<body>
+    {% if messages %}
+    <ul class="messages">
+       {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+       {% endfor %}
+     </ul>
+    {% endif %}
+
+    <section class= "s1"> 
+        <div class = "main-container"> 
+            <div class= "greeting-wrapper">
+                <h1>Hi, i'm DobbieDts</h1>
+            </div>
+            <div class="intro-wrapper">
+                <div class="nav-wrapper">
+                    <div class="dots-wrapper">
+                        <div id="dot-1" class= "browser-dot"></div>
+                        <div id="dot-2" class= "browser-dot"></div>
+                        <div id="dot-3" class= "browser-dot"></div>
+                    
+                    </div>
+
+                    <ul id="navigation">
+                        <li><b><a href="#contact-form">Contact</a></b></li>
+                        
+                    </ul>
+                </div> 
+                <div class="left-column">
+                    <img id="profile-pic" src= "{% static 'img/laolu.jpeg' %}">
+                    <h5 style="text-align: center; line-height:0;">Personalize Theme</h5>
+                
+                    <div id="theme-option">
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+                    </div>
+
+                    <p id="settings-note">*Theme settings will be saved for <br> your next visit</br></p>
+
+                </div> 
+
+
+
+
+                <div class="right-column">
+                    <div id="preview-shadow">
+                        <div id="preview"> 
+                            <div id="corner-tl" class="corner"></div>
+                            <div id="corner-tr" class="corner"></div>
+                            <h3>What I Do?</h3> 
+                            <p>I am a Software Develper proficient in Python, HTML,CSS and Javascript. I also double as a well skilled UI/UX designer </p> 
+                            <div id="corner-br" class="corner"></div>
+                            <div id="corner-bl" class="corner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+    </section>
+    <section class= "s2"> 
+        <div class = "main-container"> 
+            <div class="about-wrapper">
+                <div class="about-me">
+                    <h4> More about me</h4>
+                    <p> I love providing technological related solutions in different forms to client to make operations seamless for end users.</p>
+                    <p>I am always available to work with a team on anything related to my stack or area of expertise while still maintaining an open mind to learn more.</p>
+               
+                
+                    <hr>
+                    <h4>TOP EXPERTISE</h4>
+                    <p>Backend developer with primary focus on Python Django and scondary focus on UI/UX design with Figma : <a  target="_blank" href="resume.pdf">Download Resume</a><p/>
+
+                    <div id="skills">
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Github</li>
+                            
+                        </ul>
+
+                        <ul>
+                            <li>Javascript</li>
+                            <li>MySQL</li>
+                            <li>Heroku</li>
+                            <li>Figma</li>
+                            <li>Web3</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>   
+                <div class="social-links ">
+                    <div class="image-container">
+                    <img id="yt"  class='social-img' src= "{% static 'img/twitter.png' %}">
+                    <img id="yt" class='social-img' src= "{% static 'img/github.png' %}">
+                    <img id="yt" class='social-img' src= "{% static 'img/figma.png' %}">
+                    </div>
+                    <h3> Find me on Twitter and Youtube</h3>
+
+                    <a target="_blank" href="https://github.com/dobbiedts">Github: @dobbiedts</a>
+                    <br>
+                    <a target="_blank" href="https://twitter.com/dobbiedts_">Twitter: @dobbiedts_</a>
+                    <br>
+                    <a target="_blank" href="https://www.figma.com/files/user/956916037705596486?fuid=956916037705596486">Figma: Sola</a>
+
+                    
+                </div>
+
+
+            </div>
+            
+        </div>
+    </section>
+    <section class= "s1"> 
+        <div class = "main-container"> 
+            <h3 style= "text-align:center"> Some of my past projects</h3>
+            <div class="post-wrapper">
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="{% static 'img/inv.png' %}">
+                        <div class= "post-preview">
+                        <h6 class="post-title">Stock</h6> 
+                        <p class="post-intro">An app that helps store managers kepp track of their products, orders, sales etc.  </p>
+                        <br>
+                        <a target="_blank" href="https://maninv.herokuapp.com/">See More</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="{% static 'img/ecom.png' %}">
+                        <div class= "post-preview">
+                        <h6 class="post-title">Ecom</h6> 
+                        <p class="post-intro">An online store to allow for ease of shopping for users</p>
+                        <br>
+                        <a href="{% url 'post' %}">Read More</a>
+                        
+                        </div>
+                    </div>
+                </div>  
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="{% static 'img/weather.png' %}">
+                        <div class= "post-preview">
+                        <h6 class="post-title">Weather App</h6> 
+                        <p class="post-intro">This app enables you keep track of the weather conditions of different cities across the world </p>
+                        <a href="{% url 'post' %}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class= "s2"> 
+        <div class = "main-container"> 
+            <h3 style="text-align:center;">Contact Me</h3>
+            <form method="POST" id="contact-form" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <label>Name</label>
+                <input class="input-field" type="text" name="name">
+              
+                <label>Subject</label>
+                <input class="input-field" type="text" name="subject">
+                
+                <label>Email</label>
+                <input class="input-field" type="email" name="email">
+
+                <label>Message</label>
+                <textarea class="input-field" type="text" name="message"></textarea>
+
+
+                <button id="submit-btn" type="submit" >Submit</button>
+            
+                
+            </form>
+        </div>
+
+    </section>
+   
+    <script type="text/javascript" src="{% static 'js/myjs.js' %}"></script>
+</body> 
+
+
+</html>
